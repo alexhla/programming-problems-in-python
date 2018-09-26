@@ -13,11 +13,11 @@ class Solution:
 		if n > (2**31)-1:	# check for overflow
 			return 0
 		else:
-			return sign * n 	# recombine with sign and return
+			return sign * n # recombine with sign and return
 
 	def reverse2(self, x):
 		sign = -1 if x<0 else 1
-		s = str(abs(x))			# convert absolute value of int to string to avoid dash
+		s = str(abs(x))		# convert absolute value of int to string to avoid dash
 		n = sign*int(s[::-1])	# reverse string and convert back to int adding sign last
 		if (n > (2**31)-1) or (n < -2**31):  # check for overflow
 			return 0
