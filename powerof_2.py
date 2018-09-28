@@ -1,6 +1,12 @@
 class Solution:
 	def isPowerOfTwo(self, n):
-		# slower method: multiply by 2 until reaching n
+		# taking adavantage of the fact that binary is base 2 if the MSB is set
+		# with all other bits cleared then that given number is a power of two 
+		# e.g. with decimal numbers if the most significant digit is 1 followed by 
+		# all other digits being cleared it is a power of ten (10, 100, 1000, etc.)
+		return (n > 0) and (n&(n-1) == 0)
+
+		# slowest method: multiply by 2 until reaching n
 		x = 1
 		while x < n:
 			x *= 2
