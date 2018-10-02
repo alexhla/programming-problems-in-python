@@ -1,15 +1,15 @@
 class Solution:
 	def removeElement(self, nums, val):
-		i = 0
-		j = len(nums)-1
+		i = 0			# 1st index 
+		j = len(nums)-1 # 2nd index
 
-		while i <= j:
-			if nums[i] == val:
-				nums[i] = nums[j]
-				j -= 1
+		while i <= j:	# loop until pointers cross eachother
+			if nums[i] == val:		# if value at 1st index is a match
+				nums[i] = nums[j]	# replace with value at 2nd index
+				j -= 1				# and then decrement the 2nd index
 			else:
-				i +=1
-
+				i +=1	# only increment 1st index when it is NOT a match
+						# as a 2nd index replacement may also be a match
 		return i
 
 obj = Solution()
