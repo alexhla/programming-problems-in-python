@@ -1,13 +1,13 @@
 class Solution:
-	def removeDuplicates(self, nums):
-		if not nums:
+	def removeDuplicates(self, nums): # remove duplicate numbers from a sorted list
+		if not nums:  # an empty list has zero duplicates 
 			return 0
 
-		i = 0
-		for j in range(1, len(nums)):
-			if nums[i] != nums[j]:
-				i += 1
-				nums[i] = nums[j]
+		i = 0  # 1st pointer
+		for j in range(1, len(nums)):  # loop with 2nd pointer to avoid index overflow
+			if nums[i] != nums[j]:  # IF nums at 1st and 2nd pointers are NOT the same
+				i += 1  # increment first pointer
+				nums[i] = nums[j] # swap nums
 
 		return i+1
 
