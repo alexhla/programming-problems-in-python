@@ -7,7 +7,7 @@ class Node:
 class Solution:
 	def countnodes(self, A):
 		
-		if A == None:
+		if not A:
 			return 0
 
 		# count = 1
