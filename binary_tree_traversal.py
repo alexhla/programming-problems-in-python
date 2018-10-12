@@ -6,21 +6,21 @@ class Node:
 
 class Solution:
 	def preorder(self, A):
-		if A == None:
+		if not A:
 			return
 		print("{} " .format(A.val), end="")
 		self.preorder(A.left)
 		self.preorder(A.right)
 
 	def inorder(self, A):
-		if A == None:
+		if not A:
 			return
 		self.inorder(A.left)
 		print("{} " .format(A.val), end="")
 		self.inorder(A.right)
 
 	def postorder(self, A):
-		if A == None:
+		if not A:
 			return
 		self.postorder(A.left)
 		self.postorder(A.right)
