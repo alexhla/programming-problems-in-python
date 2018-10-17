@@ -1,11 +1,22 @@
 class Solution:
 	def intersect(self, x, y):
 
+		# Method 1
 		return list(set(x).intersection(set(y)))
 
-		# s1 = set(nums1)
-		# s2 = set(nums2)
-		# return list(s1.intersection(s2))
+		# Method 2
+		s1 = set(x)
+		s2 = set(y)
+		return list(s1.intersection(s2))
+
+		# Method 3
+		xset = set(x)
+		answer = set()
+		for num in y:
+			if num in xset:
+				answer.add(num)
+		
+		return list(answer)
 
 obj = Solution()
 a1 = [1,2,2,3,4,5,16]
