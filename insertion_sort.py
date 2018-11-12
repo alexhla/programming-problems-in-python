@@ -1,14 +1,14 @@
 class Solution:
 	def insertion_sort(self, arr):
 		for i in range(1, len(arr)):
-			key = arr[i]
+			key = arr[i]  # key separates sorted (left side) from unsorted (right side)
 			j = i-1
 
-			while j >= 0 and key < arr[j]:
-				arr[j+1] = arr[j]
+			while j >= 0 and key < arr[j]:  # while values to the left of the key are greater keep going
+				arr[j+1] = arr[j]  # shifting elements to the right after each compare
 				j -= 1
 
-			arr[j+1] = key
+			arr[j+1] = key  # current key needs to be inserted back into the list in correct position
 
 		return arr
 
